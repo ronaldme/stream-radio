@@ -3,11 +3,37 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:StreamRadio.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Stream Radio"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Height="450" Width="800"
+        >
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="174,137,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <Button Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Name="QMusicFouteUur" Click="QMusicFouteUurClick"/>
+
+        <Button Grid.Column="0" Grid.Row="1" Name="QMusic" Content="Q music" Click="QMusicClick"/>
+        <Button Grid.Column="1" Grid.Row="1" Name="Radio10" Content="Radio 10" Click="Radio10Click"/>
+        <Button Grid.Column="2" Grid.Row="1" Name="Veronica" Content="Veronica" Click="VeronicaClick"/>
+
+        <Button Grid.Column="0" Grid.Row="2" Name="SkyRadio" Content="SkyRadio" Click="SkyRadioClick"/>
+        <Button Grid.Column="1" Grid.Row="2" Name="BNR" Content="BNR" Click="BNRClick"/>
+        <Button Grid.Column="2" Grid.Row="2" Name="SLAM" Content="SLAM!" Click="SlamClick"/>
+
+        <Button Grid.Column="0" Grid.Row="3" Name="Radio1" Content="Radio 1" Click="Radio1Click"/>
+        <Button Grid.Column="1" Grid.Row="3" Name="Radio2" Content="Radio 2" Click="Radio2Click"/>
+        <Button Grid.Column="2" Grid.Row="3" Name="ArrowClassicRock" Content="Arrow classic rock" Click="ArrowClassicRockClick"/>
     </Grid>
 </Window>
