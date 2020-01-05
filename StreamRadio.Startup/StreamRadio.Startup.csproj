@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\StreamRadio.DAL\StreamRadio.DAL.csproj" />
     <ProjectReference Include="..\StreamRadio.Services\StreamRadio.Services.csproj" />
   </ItemGroup>
 
