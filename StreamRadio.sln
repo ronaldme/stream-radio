@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamRadio.WPF", "StreamRadio.WPF\StreamRadio.WPF.csproj", "{A1D481AC-946B-4103-BB4B-5377EE6CE2C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamRadio.Service", "StreamRadio.Service\StreamRadio.Service.csproj", "{68A038F9-FE29-47AB-8545-176705520C4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamRadio.Services", "StreamRadio.Services\StreamRadio.Services.csproj", "{71A817DC-CF23-4EF1-8D64-02AE9803441B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,14 @@ Global
 		{A1D481AC-946B-4103-BB4B-5377EE6CE2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1D481AC-946B-4103-BB4B-5377EE6CE2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1D481AC-946B-4103-BB4B-5377EE6CE2C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68A038F9-FE29-47AB-8545-176705520C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68A038F9-FE29-47AB-8545-176705520C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68A038F9-FE29-47AB-8545-176705520C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68A038F9-FE29-47AB-8545-176705520C4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A220A07-6FE1-49EA-B2B7-B8C222B683F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A220A07-6FE1-49EA-B2B7-B8C222B683F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A220A07-6FE1-49EA-B2B7-B8C222B683F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A220A07-6FE1-49EA-B2B7-B8C222B683F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71A817DC-CF23-4EF1-8D64-02AE9803441B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71A817DC-CF23-4EF1-8D64-02AE9803441B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71A817DC-CF23-4EF1-8D64-02AE9803441B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71A817DC-CF23-4EF1-8D64-02AE9803441B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
