@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamRadio.WPF", "StreamRadio.WPF\StreamRadio.WPF.csproj", "{A1D481AC-946B-4103-BB4B-5377EE6CE2C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamRadio.Startup", "StreamRadio.Startup\StreamRadio.Startup.csproj", "{2A220A07-6FE1-49EA-B2B7-B8C222B683F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StreamRadio.Startup", "StreamRadio.Startup\StreamRadio.Startup.csproj", "{2A220A07-6FE1-49EA-B2B7-B8C222B683F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamRadio.Services", "StreamRadio.Services\StreamRadio.Services.csproj", "{71A817DC-CF23-4EF1-8D64-02AE9803441B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StreamRadio.Services", "StreamRadio.Services\StreamRadio.Services.csproj", "{71A817DC-CF23-4EF1-8D64-02AE9803441B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamRadio.DAL", "StreamRadio.DAL\StreamRadio.DAL.csproj", "{60390027-EE2D-4189-A973-2A5661353BBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{71A817DC-CF23-4EF1-8D64-02AE9803441B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71A817DC-CF23-4EF1-8D64-02AE9803441B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71A817DC-CF23-4EF1-8D64-02AE9803441B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60390027-EE2D-4189-A973-2A5661353BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60390027-EE2D-4189-A973-2A5661353BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60390027-EE2D-4189-A973-2A5661353BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60390027-EE2D-4189-A973-2A5661353BBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
