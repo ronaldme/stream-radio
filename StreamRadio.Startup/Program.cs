@@ -11,6 +11,8 @@ namespace StreamRadio.Startup
             {
                 hostConfig.StartAutomaticallyDelayed();
 
+                hostConfig.UseLog4Net("log4net.config");
+
                 hostConfig.EnableServiceRecovery(serviceRecovery =>
                 {
                     serviceRecovery.RestartService(5);
