@@ -1,11 +1,10 @@
-﻿using System.Threading.Tasks;
-using Topshelf;
+﻿using Topshelf;
 
 namespace StreamRadio.Startup
 {
     public static class Program
     {
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
             HostFactory.Run(hostConfig =>
             {
