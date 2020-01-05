@@ -53,5 +53,7 @@ namespace StreamRadio.Services
                 }
             }, sourceToken);
         }
+
+        public void StopStreaming() => _source?.Cancel();
     }
 }
