@@ -62,7 +62,7 @@ namespace StreamRadio.Startup
                     if (user == null) await _bot.SendTextMessageAsync(message.Chat.Id, "Welcome to StreamRadio.\n\n" +
                                                                                        "Please authenticate with /authenticate YOUR_KEY");
                     else await _bot.SendTextMessageAsync(message.Chat.Id, "Welcome back to StreamRadio.", replyMarkup: Keyboard.GetReplyKeyboard());
-                    break;
+                    return;
                 case "/authenticate" when user == null:
                     if (commands.Length != 2)
                     {
@@ -77,11 +77,15 @@ namespace StreamRadio.Startup
                     }
                     else
                         await _bot.SendTextMessageAsync(message.Chat.Id, $"Wrong API key: {commands[1]}.");
-                    break;
+                    return;
                 case "/help":
                     await _bot.SendTextMessageAsync(message.Chat.Id, "/start - start streaming \n" +
                                             (user == null ? "\n/authenticate - authenticate and start streaming" : null));
-                    break;
+                    return;
+                case "stop":
+                    _radio.StopStreaming();
+                    await _bot.SendTextMessageAsync(message.Chat.Id, "Streaming stopped.");
+                    return;
             }
 
             if (user != null)
