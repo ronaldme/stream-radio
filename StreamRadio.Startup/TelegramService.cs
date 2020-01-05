@@ -19,6 +19,7 @@ namespace StreamRadio.Startup
 
         private readonly Radio _radio = new Radio();
         private readonly string _authenticationKey = ConfigurationManager.AppSettings["authenticationKey"];
+        private readonly string _postUrl = ConfigurationManager.AppSettings["postCurrentRadioUrl"];
         private readonly TelegramBotClient _bot = new TelegramBotClient(ConfigurationManager.AppSettings["telegramToken"]);
         private readonly UserRepository _userRepository = new UserRepository();
 
@@ -92,6 +93,9 @@ namespace StreamRadio.Startup
             {
                 RadioType radioType = (RadioType)Enum.Parse(typeof(RadioType), text);
                 _radio.PlayStream(radioType);
+
+                if (_postUrl != null) 
+                    PostHelper.Post(_postUrl, $"Streaming: {EnumHelper<RadioType>.GetEnumDescription(text)}");
             }
         }
 
