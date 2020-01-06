@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using StreamRadio.Services;
 
 namespace StreamRadio.WPF
@@ -11,6 +13,12 @@ namespace StreamRadio.WPF
         public MainWindow()
         {
             InitializeComponent();
+
+            var brush = new ImageBrush
+            {
+                ImageSource = new BitmapImage(new Uri("Images/Q-music-foute-uur.png", UriKind.Relative))
+            };
+            QMusicFouteUur.Background = brush;
         }
 
         private void QMusicFouteUurClick(object sender, RoutedEventArgs e) => _radio.PlayStream(RadioType.QMusicFouteUur);
