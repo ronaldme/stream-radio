@@ -80,8 +80,15 @@ namespace StreamRadio.Startup
                         await _bot.SendTextMessageAsync(message.Chat.Id, $"Wrong API key: {commands[1]}.");
                     return;
                 case "/help":
-                    await _bot.SendTextMessageAsync(message.Chat.Id, "/start - start streaming \n" +
+                    await _bot.SendTextMessageAsync(message.Chat.Id, "/start - start streaming\n" +
+                                                                     "/what-is-playing-now\n" +
                                             (user == null ? "\n/authenticate - authenticate and start streaming" : null));
+                    return;
+                case "/what-is-playing-now":
+                    string reply = _radio.CurrentRadio == RadioType.None ?
+                        "Everything is silent." :
+                        $"Streaming: {EnumHelper<RadioType>.GetEnumDescription(_radio.CurrentRadio.ToString())}";
+                    await _bot.SendTextMessageAsync(message.Chat.Id, reply);
                     return;
                 case "stop":
                     _radio.StopStreaming();

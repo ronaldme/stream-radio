@@ -25,6 +25,7 @@ namespace StreamRadio.Services
 
         public void PlayStream(RadioType radioType)
         {
+            CurrentRadio = radioType;
             var url = _radioStreams[radioType];
 
             _source?.Cancel();
@@ -33,6 +34,8 @@ namespace StreamRadio.Services
             var task = PlayMusic(url, _source.Token);
             task.Start();
         }
+
+        public RadioType CurrentRadio { get; private set; }
 
         private Task PlayMusic(string url, CancellationToken sourceToken)
         {
@@ -54,6 +57,10 @@ namespace StreamRadio.Services
             }, sourceToken);
         }
 
-        public void StopStreaming() => _source?.Cancel();
+        public void StopStreaming()
+        {
+            CurrentRadio = RadioType.None;
+            _source?.Cancel();
+        }
     }
 }
