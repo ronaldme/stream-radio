@@ -28,8 +28,7 @@ namespace StreamRadio.Startup.Helpers
                         new KeyboardButton("Radio1"),
                         new KeyboardButton("Radio2"),
                         new KeyboardButton("ArrowClassicRock")
-                    }
-                    ,
+                    },
                     new[]
                     {
                         new KeyboardButton("stop"),
