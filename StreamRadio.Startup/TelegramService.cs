@@ -102,7 +102,7 @@ namespace StreamRadio.Startup
                 var radioType = GetValueFromDescription<RadioType>(text);
                 _radio.PlayStream(radioType);
 
-                if (_postUrl != null) 
+                if (!string.IsNullOrEmpty(_postUrl)) 
                     PostHelper.Post(_postUrl, $"Streaming: {EnumHelper<RadioType>.GetEnumDescription(text)}");
             }
         }
