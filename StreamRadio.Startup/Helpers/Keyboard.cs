@@ -1,4 +1,5 @@
-﻿using Telegram.Bot.Types.ReplyMarkups;
+﻿using StreamRadio.Services;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace StreamRadio.Startup.Helpers
 {
@@ -10,24 +11,30 @@ namespace StreamRadio.Startup.Helpers
             {
                 Keyboard = new[]
                 {
-                    new[] {new KeyboardButton("QMusicFouteUur")},
+                    new[] {new KeyboardButton(nameof(RadioType.QMusicFouteUur))},
                     new[]
                     {
-                        new KeyboardButton("QMusic"),
-                        new KeyboardButton("Radio10"),
-                        new KeyboardButton("Veronica"),
+                        new KeyboardButton(nameof(RadioType.QMusic)),
+                        new KeyboardButton(nameof(RadioType.QMusicNonStop)),
+                        new KeyboardButton(nameof(RadioType.Veronica)),
                     },
                     new[]
                     {
-                        new KeyboardButton("SkyRadio"),
-                        new KeyboardButton("BNR"),
-                        new KeyboardButton("Slam")
+                        new KeyboardButton(nameof(RadioType.SkyRadio)),
+                        new KeyboardButton(nameof(RadioType.BNR)),
+                        new KeyboardButton(nameof(RadioType.Slam))
                     },
                     new[]
                     {
-                        new KeyboardButton("Radio1"),
-                        new KeyboardButton("Radio2"),
-                        new KeyboardButton("ArrowClassicRock")
+                        new KeyboardButton(nameof(RadioType.Radio1)),
+                        new KeyboardButton(nameof(RadioType.Radio2)),
+                        new KeyboardButton(nameof(RadioType.ArrowClassicRock))
+                    },
+                    new[]
+                    {
+                        new KeyboardButton(nameof(RadioType.Radio10NonStop)),
+                        new KeyboardButton(nameof(RadioType.Radio1090Hits)),
+                        new KeyboardButton(nameof(RadioType.Radio10))
                     },
                     new[]
                     {
