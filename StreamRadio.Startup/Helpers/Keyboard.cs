@@ -11,30 +11,30 @@ namespace StreamRadio.Startup.Helpers
             {
                 Keyboard = new[]
                 {
-                    new[] {new KeyboardButton(nameof(RadioType.QMusicFouteUur))},
+                    new[] { GetKeyboardButton(RadioType.QMusicFouteUur)},
                     new[]
                     {
-                        new KeyboardButton(nameof(RadioType.QMusic)),
-                        new KeyboardButton(nameof(RadioType.QMusicNonStop)),
-                        new KeyboardButton(nameof(RadioType.Veronica)),
+                        GetKeyboardButton(RadioType.QMusic),
+                        GetKeyboardButton(RadioType.QMusicNonStop),
+                        GetKeyboardButton(RadioType.Veronica),
                     },
                     new[]
                     {
-                        new KeyboardButton(nameof(RadioType.SkyRadio)),
-                        new KeyboardButton(nameof(RadioType.BNR)),
-                        new KeyboardButton(nameof(RadioType.Slam))
+                        GetKeyboardButton(RadioType.SkyRadio),
+                        GetKeyboardButton(RadioType.BNR),
+                        GetKeyboardButton(RadioType.Slam),
                     },
                     new[]
                     {
-                        new KeyboardButton(nameof(RadioType.Radio1)),
-                        new KeyboardButton(nameof(RadioType.Radio2)),
-                        new KeyboardButton(nameof(RadioType.ArrowClassicRock))
+                        GetKeyboardButton(RadioType.Radio1),
+                        GetKeyboardButton(RadioType.Radio2),
+                        GetKeyboardButton(RadioType.ArrowClassicRock),
                     },
                     new[]
                     {
-                        new KeyboardButton(nameof(RadioType.Radio10NonStop)),
-                        new KeyboardButton(nameof(RadioType.Radio1090Hits)),
-                        new KeyboardButton(nameof(RadioType.Radio10))
+                        GetKeyboardButton(RadioType.Radio10NonStop),
+                        GetKeyboardButton(RadioType.Radio1090Hits),
+                        GetKeyboardButton(RadioType.Radio10),
                     },
                     new[]
                     {
@@ -43,5 +43,8 @@ namespace StreamRadio.Startup.Helpers
                 }
             };
         }
+
+        private static KeyboardButton GetKeyboardButton(RadioType radioType)
+            => new KeyboardButton(EnumHelper<RadioType>.GetEnumDescription(radioType.ToString()));
     }
 }

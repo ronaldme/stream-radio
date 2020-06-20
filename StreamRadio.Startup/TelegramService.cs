@@ -10,6 +10,7 @@ using Telegram.Bot;
 using Telegram.Bot.Args;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using static StreamRadio.Startup.Helpers.EnumHelper<StreamRadio.Services.RadioType>;
 
 namespace StreamRadio.Startup
 {
@@ -98,7 +99,7 @@ namespace StreamRadio.Startup
 
             if (user != null)
             {
-                RadioType radioType = (RadioType)Enum.Parse(typeof(RadioType), text);
+                var radioType = GetValueFromDescription<RadioType>(text);
                 _radio.PlayStream(radioType);
 
                 if (_postUrl != null) 
