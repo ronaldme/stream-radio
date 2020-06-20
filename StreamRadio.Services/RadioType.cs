@@ -35,5 +35,14 @@ namespace StreamRadio.Services
 
         [Description("Arrow Classic Rock")]
         ArrowClassicRock,
+
+        [Description("Radio 10 non-stop")]
+        Radio10NonStop,
+
+        [Description("Radio 10 90s hits")]
+        Radio1090Hits,
+
+        [Description("Q music non-stop")]
+        QMusicNonStop,
     }
 }
